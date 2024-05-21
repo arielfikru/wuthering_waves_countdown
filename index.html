@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wuthering Waves Countdown</title>
+    <link rel="icon" href="ww.ico" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-900 text-white font-sans leading-normal tracking-normal">
+    <div class="background">
+        <div class="background-image" id="background1" style="background-image: url('wallpaper-1.webp');"></div>
+        <div class="background-image" id="background2" style="background-image: url('wallpaper-2.webp');"></div>
+        <div class="background-image" id="background3" style="background-image: url('wallpaper-3.webp');"></div>
+        <div class="background-image" id="background4" style="background-image: url('wallpaper-4.webp');"></div>
+    </div>
+    <div class="content min-h-screen flex flex-col items-center justify-center relative">
+        <div class="bg-gray-800 bg-opacity-90 rounded-lg shadow-lg p-6 max-w-lg w-full text-center" id="card-content">
+            <h1 class="text-2xl md:text-3xl font-bold mb-4">Countdown to Wuthering Waves Release</h1>
+            <p id="local-release-time" class="text-md md:text-lg mb-4"></p>
+            <div id="countdown-display" class="text-xl md:text-2xl mb-4"></div>
+            <div class="links grid gap-4 md:grid-cols-2">
+                <a href="https://wutheringwaves.kurogames.com/en/" target="_blank" class="block bg-custom-button hover:bg-custom-button-hover text-custom-font font-bold py-2 px-4 rounded border-2 border-custom-outline">
+                    Official Page
+                </a>
+                <a href="https://store.epicgames.com/en-US/p/wuthering-waves-76ebc5" target="_blank" class="block bg-custom-button hover:bg-custom-button-hover text-custom-font font-bold py-2 px-4 rounded border-2 border-custom-outline">
+                    Epic Games Store
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.kurogame.wutheringwaves.global" target="_blank" class="block bg-custom-button hover:bg-custom-button-hover text-custom-font font-bold py-2 px-4 rounded border-2 border-custom-outline">
+                    Playstore
+                </a>
+                <a href="https://apps.apple.com/us/app/wuthering-waves/id6475033368" target="_blank" class="block bg-custom-button hover:bg-custom-button-hover text-custom-font font-bold py-2 px-4 rounded border-2 border-custom-outline">
+                    AppStore
+                </a>
+                <a href="https://x.com/Wuthering_Waves" target="_blank" class="block bg-custom-button hover:bg-custom-button-hover text-custom-font font-bold py-2 px-4 rounded border-2 border-custom-outline">
+                    Twitter
+                </a>
+                <a href="https://www.facebook.com/WutheringWaves.Official/" target="_blank" class="block bg-custom-button hover:bg-custom-button-hover text-custom-font font-bold py-2 px-4 rounded border-2 border-custom-outline">
+                    Facebook
+                </a>
+            </div>
+            <div id="settings-icon" class="mt-4 cursor-pointer text-2xl">
+                <i class="fas fa-cog"></i>
+            </div>
+            <div id="settings-sliders" class="mt-4 hidden">
+                <div class="mt-4">
+                    <label for="blur-slider" class="block mb-2">Adjust Blur</label>
+                    <input type="range" id="blur-slider" class="w-full" min="0" max="20" value="7" oninput="adjustBlur()">
+                </div>
+                <div class="mt-4">
+                    <label for="vignette-slider" class="block mb-2">Adjust Vignette</label>
+                    <input type="range" id="vignette-slider" class="w-full" min="0" max="100" value="50" oninput="adjustVignette()">
+                </div>
+                <div class="mt-4">
+                    <label for="card-opacity-slider" class="block mb-2">Adjust Card Opacity</label>
+                    <input type="range" id="card-opacity-slider" class="w-full" min="0" max="100" value="80" oninput="adjustCardOpacity()">
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="w-full text-center text-gray-400 absolute bottom-0 py-4">
+        Made by NekoPy @2024
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
